@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  socketUrl: ''
+  socketUrl: 'wss://ws.postman-echo.com/raw'
 };
 
 /*

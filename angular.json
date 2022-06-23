@@ -57,6 +57,20 @@
               ],
               "outputHashing": "all"
             },
+            "local": {
+              "fileReplacements": [
+                {
+                  "replace": "src/environments/environment.ts",
+                  "with": "src/environments/environment.local.ts"
+                }
+              ],
+              "buildOptimizer": false,
+              "optimization": false,
+              "vendorChunk": true,
+              "extractLicenses": false,
+              "sourceMap": true,
+              "namedChunks": true
+            },
             "development": {
               "buildOptimizer": false,
               "optimization": false,
@@ -73,6 +87,9 @@
           "configurations": {
             "production": {
               "browserTarget": "websocket:build:production"
+            },
+            "local": {
+              "browserTarget": "websocket:build:local"
             },
             "development": {
               "browserTarget": "websocket:build:development"
