@@ -1,9 +1,22 @@
 
 <h1>QrComponent</h1>
 <hr>
+<h2>1) Autenticarse</h2>
 <div>
-    <label for="qrId">QrId: </label><input id="qrId" type="number" [(ngModel)]="id"/><button (click)="printSocketUrl()">Enviar</button>
+    <p>Autenticado: <strong>{{ authenticated }}</strong></p>
+    <button [disabled]="authenticationButtonDisabled" (click)="login()">Intentar autenticación</button>
+    <br>
+    <br>
 </div>
+<hr>
+<h2>2) Enviar ID del QR</h2>
 <div>
-    <p>Trabajando con QR Id: <strong>{{ id }}</strong></p>
+    <label for="qrId">QrId: </label>
+    <input id="qrId" type="number" disabled="{{ qrIdentificationControlsDisabled }}" [(ngModel)]="qrId"/>
+    <button [disabled]="qrIdentificationControlsDisabled" (click)="sendMessage()">Enviar</button>
+    <h4>Estado del QR: {{ qrStatus }}</h4>
+    <h4>Estado del Pago {{ paymentStatus }}</h4>
+    <br>
 </div>
+<hr>
+<h2 *ngIf="showLastMessage">3) Operación Finalizada</h2>

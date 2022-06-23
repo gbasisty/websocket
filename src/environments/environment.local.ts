@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  socketUrl: 'wss://ws.postman-echo.com/raw'
+  socketUrl: 'ws://127.0.0.1:8080/europa/api/europa/websocket/qr/collector'
 };
 
 /*
